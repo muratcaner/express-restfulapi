@@ -3,3 +3,4 @@
 
 # Ignore locally installed files
 node_modules/
+package-lock.json
