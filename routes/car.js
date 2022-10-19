@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
 
     try {
         const car = await insertCar( name, horsepower )
-        res.status(201).json(car)
+        res.status(201).json(car,extras)
     }
     catch (error) {
         console.error(error);

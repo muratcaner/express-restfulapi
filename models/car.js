@@ -9,7 +9,7 @@ const carSchema = new mongoose.Schema({
         required: true,
         type: Number
     }
-})
+});
 
 const Car = mongoose.model('cars', carSchema);
 
