@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
 
     try {
         const car = await insertCar( name, horsepower )
-        res.status(201).json(car,extras)
+        res.status(201).json(car)
     }
     catch (error) {
         console.error(error);
@@ -70,7 +70,7 @@ router.patch('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     try{
         const id = req.params.id;
-        const car = await car.findByIdAndDelete(id)
+        const car = await Car.findByIdAndDelete(id)
         res.send(`Document with ${data.name} has been deleted`)
     }
     catch (error) {
